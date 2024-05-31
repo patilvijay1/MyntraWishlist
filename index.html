@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra</title>
+    <style>
+        
+        .AddToBag{
+            background-color: lightgreen;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .Wishlist{
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 10px 30px;
+            text-transform: uppercase;
+        }
+
+        .AddSale{
+            background-color: lightgreen;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button class="AddToBag" onclick="TotalItems = 1 + TotalItems
+    document.querySelector('#Bag_Items').innerText = `Your Bag has ${TotalItems} items`;
+    ">Add to Bag</button>
+
+    <button class="Wishlist"  onclick="TotalItems =  TotalItems - 1
+    document.querySelector('#Bag_Items').innerText = `Your Bag has ${TotalItems} items`;
+    ">move to wishlist</button>
+
+    <button class="AddSale"  onclick="TotalItems = 2 + TotalItems
+    document.querySelector('#Bag_Items').innerText = `Your Bag has ${TotalItems} items`;
+    ">Add 1+1 Sale Item</button>
+    
+    <h1 id="Bag_Items"></h1>
+
+    <script>
+        let TotalItems = 10;
+        document.querySelector('#Bag_Items').innerText = `Your Bag has ${TotalItems} items`;
+
+
+    </script>
+</body>
+</html>
